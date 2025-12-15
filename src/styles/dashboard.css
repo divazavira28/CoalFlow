@@ -1,0 +1,478 @@
+/* ===== LAYOUT ===== */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 250px;
+  background: #ffffff;
+  border-right: 1px solid #e0e6f1;
+  padding: 24px 18px;
+}
+
+.sidebar-header {
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.sidebar-menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  color: #333;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu .active {
+  background: #4a7ff8;
+  color: white;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  flex: 1;
+  padding: 26px;
+  background: #f5f7fb;
+}
+
+/* TOPBAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.top-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.top-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+/* SUMMARY CARDS */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid #e0e6f1;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.card-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.card-icon.blue { color: #4a7ff8; }
+.card-icon.green { color: #2fb97f; }
+.card-icon.orange { color: #ff9f43; }
+
+.card-value {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+/* CONTENT ROW */
+.content-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* CHART */
+.chart-box {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid #e0e6f1;
+}
+
+.chart-placeholder {
+  height: 260px;
+  background: #ecf1ff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #4a7ff8;
+}
+
+/* TABLE */
+.table-box {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid #e0e6f1;
+}
+
+.activity-table {
+  width: 100%;
+  margin-top: 14px;
+  border-collapse: collapse;
+}
+
+.activity-table th,
+.activity-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e6f1;
+  text-align: left;
+}
+
+.activity-table tr:hover {
+  background: #f3f6ff;
+}
+
+/* ============================
+   PROFILE DROPDOWN (TOPBAR)
+=============================== */
+.top-profile-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #d5dbee;
+  transition: 0.25s;
+}
+
+.top-profile-btn:hover {
+  background: #eef2ff;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 170px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #d5dbee;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  overflow: hidden;
+  animation: dropdownFade 0.25s ease-out;
+  z-index: 50;
+}
+
+.profile-dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  font-size: 15px;
+  color: #333;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.profile-dropdown a:hover {
+  background: #f3f6ff;
+  color: #4a7ff8;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN (MOBILE • TABLET • DESKTOP)
+=============================================== */
+
+/* ====== TABLET (max-width: 992px) ====== */
+@media (max-width: 992px) {
+
+  /* Sidebar mengecil */
+  .sidebar {
+    width: 200px;
+    padding: 20px 14px;
+  }
+
+  .sidebar-header {
+    font-size: 18px;
+  }
+
+  .sidebar-menu a {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  /* Summary cards jadi 2 kolom */
+  .summary-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Chart & Table menjadi stacked */
+  .content-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ====== MOBILE (max-width: 768px) ====== */
+@media (max-width: 768px) {
+
+  /* Sidebar berubah menjadi icon-only */
+  .sidebar {
+    width: 70px;
+    padding: 20px 10px;
+  }
+
+  .sidebar-header span {
+    display: none;
+  }
+
+  .sidebar-menu a span,
+  .sidebar-menu a {
+    font-size: 0;
+  }
+
+  .sidebar-menu a i {
+    font-size: 20px;
+  }
+
+  .sidebar-menu a {
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  /* Hide title at topbar jika terlalu panjang */
+  .top-title {
+    font-size: 18px;
+  }
+
+  /* Profil button mengecil */
+  .top-profile-btn span {
+    display: none;
+  }
+
+  /* Summary Cards jadi 1 kolom */
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ====== SMALL MOBILE (max-width: 480px) ====== */
+@media (max-width: 480px) {
+
+  .main-content {
+    padding: 16px;
+  }
+
+  .top-title {
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .chart-placeholder {
+    height: 200px;
+  }
+
+  .activity-table th,
+  .activity-table td {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  /* Dropdown geser sedikit ke kiri jika layar sempit */
+  .profile-dropdown {
+    right: -40px;
+  }
+}
+
+/* ================================
+   NEW PROFILE DROPDOWN (COMPACT)
+================================ */
+.profile-dropdown-modern {
+  position: absolute;
+  top: 58px;
+  right: 0;
+  width: 220px;                   /* ⬅ mengecil */
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px;                  /* ⬅ lebih kecil */
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 200;
+  border: 1px solid #e5e7eb;
+}
+
+.dropdown-header {
+  margin-bottom: 8px;             /* ⬅ sedikit lebih kecil */
+}
+
+.dropdown-name {
+  font-size: 15px;                /* ⬅ kecil */
+  font-weight: 600;
+  margin: 0;
+}
+
+.dropdown-email {
+  font-size: 12px;                /* ⬅ kecil */
+  color: #7c8595;
+  margin: 0;
+  margin-top: 2px;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: #ececef;
+  margin: 10px 0;                 /* ⬅ lebih kecil */
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;                       /* ⬅ kecil */
+  padding: 7px 4px;               /* ⬅ kecil */
+  border-radius: 8px;             /* ⬅ lebih kecil */
+  cursor: pointer;
+  transition: 0.2s;
+  color: #2d3748;
+  text-decoration: none;
+  font-size: 14px;                /* ⬅ kecil */
+}
+
+.dropdown-item i {
+  font-size: 13px;                /* ⬅ lebih kecil */
+}
+
+.dropdown-item:hover {
+  background: #f3f4f7;
+}
+
+.dropdown-item.logout {
+  color: #d0342c;
+}
+
+.dropdown-item.logout:hover {
+  background: #ffecec;
+}
+
+/* ==== UNIVERSAL SPACING ANTAR BOX ==== */
+.weather-box,
+.table-box,
+.summary-cards,
+.chart-box {
+  margin-bottom: 32px !important;   /* Jarak antar elemen */
+}
+
+/* LOGO shipping */
+.logo-shipping {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* LOGO mining */
+.logo-mining {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* LOGO summary */
+.logo-summary {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* lokasi */
+.location-text {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #444;
+}
+.location-text i {
+  margin-right: 6px;
+  color: #2563eb;
+}
+
+
+/* waktu */
+/* LEFT SIDE: title + clock */
+.topbar-left {
+   display: flex;
+   flex-direction: column;
+   gap: 4px; /* jarak kecil antara title dan clock */
+}
+
+.time-display {
+  font-size: 14px;
+  color: #555;
+  margin-top: -4px;
+}
+
+.time-icon {
+  margin-right: 6px;
+  color: #2563EB;
+}
+
+.loading-inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* mini spinner (kalau belum ada) */
+.spinner-mini {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #ffffff88;
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.calc-btn[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+  

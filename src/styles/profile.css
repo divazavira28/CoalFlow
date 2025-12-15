@@ -1,0 +1,193 @@
+@import url("./dashboard.css");
+
+/* ================================
+   CONTAINER
+================================ */
+.profile-container {
+  display: flex;
+  height: 100vh;
+  background: #f7f9fc;
+}
+
+/* ================================
+   MAIN CONTENT
+================================ */
+.main-content {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+}
+
+/* ================================
+   PAGE TITLE BREADCRUMB
+================================ */
+.top-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* ================================
+   PROFILE SUMMARY CARD
+================================ */
+.profile-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border: 1px solid #eef1f6;
+}
+
+/* LEFT */
+.profile-card-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-avatar {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  border: 3px solid #f2f4f9;
+}
+
+.profile-basic-info .profile-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.profile-role {
+  color: #747d8c;
+  font-size: 14px;
+}
+
+/* RIGHT */
+.profile-card-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #dfe3ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.icon-btn:hover {
+  background: #f1f3f7;
+}
+
+.icon-btn i {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.edit-btn {
+  padding: 8px 18px;
+  border-radius: 12px;
+  border: 1px solid #d6dae3;
+  background: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.edit-btn:hover {
+  background: #edf0f5;
+}
+
+/* ================================
+   SECTION CARD (Personal Info, Address)
+================================ */
+.info-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  border: 1px solid #eef1f6;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+}
+
+/* HEADER */
+.info-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.info-card-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.edit-btn-sm {
+  padding: 6px 14px;
+  border-radius: 10px;
+  border: 1px solid #d6dae3;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.edit-btn-sm:hover {
+  background: #edf0f5;
+}
+
+/* ================================
+   GRID FOR LABEL & VALUE
+================================ */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 40px;
+}
+
+.info-item label {
+  display: block;
+  color: #7a7f8f;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.info-item p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #2d3748;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .profile-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .profile-card-right {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 700px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}

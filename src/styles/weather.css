@@ -1,0 +1,66 @@
+.weather-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.weather-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.weather-current p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.weather-risk {
+  margin-top: 15px;
+}
+
+.risk-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.risk-low {
+  background: #2ecc71;
+}
+
+.risk-medium {
+  background: #f1c40f;
+}
+
+.risk-high {
+  background: #e67e22;
+}
+
+.risk-very\ high,
+.risk-very-high {
+  background: #e74c3c;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+}
+
+.forecast-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 13px;
+}
+
+.forecast-rain {
+  font-weight: bold;
+  color: #3498db;
+}
+

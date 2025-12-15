@@ -1,0 +1,44 @@
+/* ============================
+        FOOTER STYLE
+=============================== */
+.footer-container {
+  width: 100%;
+  background: #ffffff;
+  border-top: 1px solid #e0e6f1;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  text-align: center;
+  color: #475569;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-title {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: #4a7ff8;
+  margin-bottom: 4px;
+}
+
+.footer-copy {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ============================
+        RESPONSIVE
+=============================== */
+@media (max-width: 600px) {
+  .footer-title {
+    font-size: 16px;
+  }
+
+  .footer-copy {
+    font-size: 13px;
+  }
+}

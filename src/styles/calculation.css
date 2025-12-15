@@ -1,0 +1,77 @@
+/* ===== LAYOUT FIX: give space because of sidebar ===== */
+.calc-container {
+  max-width: 850px;
+  margin: 20px auto;
+  margin-left: 260px; /* space for sidebar */
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  font-family: "Inter", sans-serif;
+}
+
+/* TITLE */
+.calc-title {
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* FORM */
+.calc-form-box,
+.calc-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.calc-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.calc-label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.calc-input {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+}
+
+/* BUTTON */
+.calc-btn {
+  padding: 12px 16px;
+  background: #2563eb;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* RESULT */
+.calc-result {
+  background: #e0f2fe;
+  padding: 15px;
+  border-left: 5px solid #0284c7;
+  border-radius: 8px;
+}
+
+/* AI BOX */
+.calc-ai-box {
+  background: #f3f4f6;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 5px solid #4b5563;
+}
+
+.calc-ai-text {
+  white-space: pre-wrap;
+}
+
